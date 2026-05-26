@@ -113,17 +113,17 @@ def main():
     simpan_grid(
         peta_awal,
         "Kondisi Awal (Baseline) — 169 sel hutan, 2 patch",
-        "gambar/fig_grid_awal.png",
+        "../gambar/fig_grid_awal.png",
         [HUTAN_PRIMER, HUTAN_SEKUNDER, LAHAN_TERBUKA],)
     simpan_grid(
         peta_g60,
         "Setelah Greedy (60 sel) — 30 patch, terbesar 17 sel",
-        "gambar/fig_grid_greedy60.png",
+        "../gambar/fig_grid_greedy60.png",
         [HUTAN_PRIMER, HUTAN_SEKUNDER, LAHAN_TERBUKA, PERKEBUNAN],)
     simpan_grid(
         peta_cg60,
         "Setelah Counter-Greedy (60 sel) — 2 patch, terbesar 164 sel",
-        "gambar/fig_grid_counter60.png",
+        "../gambar/fig_grid_counter60.png",
         [HUTAN_PRIMER, HUTAN_SEKUNDER, LAHAN_TERBUKA, PERKEBUNAN],)
     print("Menyimpan chart multi-skenario...")
     from fragmentasi import analisis_fragmentasi
@@ -134,7 +134,7 @@ def main():
         data[target] = {
             "greedy":  (sg["jumlah_patch"],  sg["patch_terbesar"]),
             "counter": (scg["jumlah_patch"], scg["patch_terbesar"]),}
-    simpan_chart_patch(data, "gambar/fig_chart_patch.png")
+    simpan_chart_patch(data, "../gambar/fig_chart_patch.png")
 
 if __name__ == "__main__":
     main()
