@@ -8,8 +8,8 @@ Dibuat sebagai bagian dari makalah **"Simulasi Ekspansi Lahan Perkebunan Menggun
 
 Program ini memodelkan pola pembukaan lahan perkebunan pada *grid* 15×15 yang merepresentasikan peta lahan Papua. Dua algoritma dibandingkan:
 
-- **Greedy** — selalu memilih sel dengan nilai ekonomi tertinggi, merepresentasikan ekspansi yang berorientasi keuntungan jangka pendek.
-- **Counter-Greedy** — mendahulukan lahan terbuka sebelum mengonversi hutan sekunder dan hutan primer, merepresentasikan pendekatan yang lebih konservatif terhadap hutan.
+- **Greedy** selalu memilih sel dengan nilai ekonomi tertinggi, merepresentasikan ekspansi yang berorientasi keuntungan jangka pendek.
+- **Counter-Greedy** mendahulukan lahan terbuka sebelum mengonversi hutan sekunder dan hutan primer, merepresentasikan pendekatan yang lebih konservatif terhadap hutan.
 
 Setelah ekspansi, fragmentasi hutan dianalisis menggunakan algoritma BFS (*Breadth-First Search*) untuk menghitung jumlah dan ukuran *patch* hutan yang tersisa.
 
@@ -83,7 +83,7 @@ SKENARIO: TARGET KONVERSI = 60 SEL
 
 ## Hasil Utama
 
-| Skenario | Greedy — Patch | Counter-Greedy — Patch | Greedy — Nilai | Counter-Greedy — Nilai |
+| Skenario | Patch Greedy | Patch Counter-Greedy | Nilai Greedy | Nilai Counter-Greedy |
 |---|---|---|---|---|
 | 40 sel | 15 | 2 | 380,38 | 111,57 |
 | 60 sel | 30 | 2 | 555,12 | 161,75 |
