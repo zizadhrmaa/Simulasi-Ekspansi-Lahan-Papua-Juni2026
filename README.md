@@ -3,6 +3,7 @@
 Dibuat sebagai bagian dari makalah **"Simulasi Ekspansi Lahan Perkebunan Menggunakan Algoritma Greedy dan Analisis Dampaknya terhadap Fragmentasi Hutan Adat Papua"** untuk mata kuliah IF2211 Strategi Algoritma, Institut Teknologi Bandung, Tahun Ajaran 2025/2026.
 
 ---
+
 ## Deskripsi
 
 Program ini memodelkan pola pembukaan lahan perkebunan pada *grid* 15×15 yang merepresentasikan peta lahan Papua. Dua algoritma dibandingkan:
@@ -17,15 +18,25 @@ Setelah ekspansi, fragmentasi hutan dianalisis menggunakan algoritma BFS (*Bread
 ## Struktur Direktori
 
 ```
-.
-├── main.py              # Entry point — jalankan ini
-├── konstanta.py         # Tipe lahan, label, simbol ASCII
-├── inisialisasi.py      # Pembuatan grid dan nilai ekonomi
-├── algoritma.py         # Greedy dan Counter-Greedy
-├── fragmentasi.py       # BFS dan analisis patch
-├── visualisasi.py       # Fungsi cetak dan tabel output
-├── runner.py            # Menjalankan dan menampilkan satu skenario
-└── buat_gambar.py       # Menghasilkan gambar untuk makalah (butuh matplotlib)
+Simulasi-Ekspansi-Lahan-Papua-Juni2026/
+├── doc/
+│   └── 13524017_Aziza Dharma Putri_Simulasi Ekspansi Lahan Perkebunan Menggunakan Algoritma Greedy dan Analisis Dampaknya terhadap Fragmentasi Hutan Adat Papua.pdf
+├── gambar/
+│   ├── fig_chart_patch.png
+│   ├── fig_grid_awal.png
+│   ├── fig_grid_counter60.png
+│   └── fig_grid_greedy60.png
+├── src/
+│   ├── algoritma.py       # Greedy dan Counter-Greedy
+│   ├── buat_gambar.py     # Menghasilkan gambar untuk makalah
+│   ├── fragmentasi.py     # BFS dan analisis patch
+│   ├── inisialisasi.py    # Pembuatan grid dan nilai ekonomi
+│   ├── konstanta.py       # Tipe lahan, label, simbol ASCII
+│   ├── main.py            # Entry point — jalankan ini
+│   ├── runner.py          # Menjalankan dan menampilkan satu skenario
+│   └── visualisasi.py     # Fungsi cetak dan tabel output
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -35,10 +46,13 @@ Setelah ekspansi, fragmentasi hutan dianalisis menggunakan algoritma BFS (*Bread
 Pastikan Python 3.9 atau lebih baru sudah terinstal.
 
 ```bash
+# Masuk ke folder src
+cd src
+
 # Jalankan simulasi teks
 python main.py
 
-# Hasilkan gambar untuk makalah
+# Hasilkan gambar (disimpan ke ../gambar/)
 python buat_gambar.py
 ```
 
@@ -81,7 +95,7 @@ SKENARIO: TARGET KONVERSI = 60 SEL
 
 ## Tautan
 
-- 📄 **Makalah**: tersedia di repositori ini
+- 📄 **Makalah**: lihat folder `doc/`
 - 🎥 **Video penjelasan**: [bit.ly/SimulasiGreedyLahanPapua2026Ziza](https://bit.ly/SimulasiGreedyLahanPapua2026Ziza)
 
 ---
